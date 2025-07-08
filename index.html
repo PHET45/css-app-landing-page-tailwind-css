@@ -2,12 +2,140 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acme App</title>
+    <title>Get in Touch - Modern Contact Form</title>
+    <!-- Remove style.css, use Tailwind CDN for demo -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+    </style>
   </head>
-  <body>
-    <!-- Start Coding Here -->
+  <body class="bg-[#F6F6FB] min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <section class="sticky top-0 z-50 flex justify-center py-2 px-5 bg-transparent">
+      <div class="flex items-center justify-between w-full max-w-[100%] h-20 rounded-full bg-white shadow-md px-20">
+        <div>
+          <!-- Inline SVG logo -->
+          <svg width="100" height="40" viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
+            <text x="0" y="32" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="bold" fill="#232336">Acme</text>
+            <circle cx="89" cy="10" r="4" fill="#5E44FF" />
+          </svg>
+        </div>
+        <nav>
+          <ul class="flex gap-8">
+            <li><a href="#home" class="font-medium text-base text-[#5E44FF] underline underline-offset-4 decoration-2">Home</a></li>
+            <li><a href="#features" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Features</a></li>
+            <li><a href="#pricing" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Pricing</a></li>
+            <li><a href="#contact" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- Hero Section -->
+    <section class="flex justify-center w-full py-28 bg-[#F6F6FB]">
+      <div class="flex flex-col items-center gap-10">
+        <span class="font-medium text-base text-center px-5 py-2 bg-[#563AFF1A] rounded-full text-[#5E44FF]">🌈️ Acme Productivity App</span>
+        <h1 class="font-extrabold text-[64px] md:text-[80px] leading-[1.05] text-center">Boost Your <span class="text-[#5E44FF]">Product</span>ivity</h1>
+        <h3 class="font-semibold text-2xl md:text-3xl text-center">Streamline your workflow with our all-in-one productivity app.</h3>
+        <button class="w-48 h-15 rounded-lg px-8 py-4 bg-[#1A1A2C] text-white font-semibold text-base hover:bg-[#5F5F76] transition" onclick="window.location.href='#'">Start Free Trial</button>
+      </div>
+    </section>
+    <!-- Feature Section -->
+    <section class="w-full flex justify-center py-10" id="features">
+      <div class="flex flex-col md:flex-row gap-5 w-full max-w-7xl justify-center items-center">
+        <div class="w-96 h-72 rounded-2xl bg-[#D7E5F6] flex flex-col">
+          <!-- Outer: blue background, padding, rounded -->
+          <div class="bg-[#D7E5F6] p-3 rounded-xl inline-flex">
+            <!-- Inner: white square, center icon -->
+            <div class="bg-white w-12 h-12 flex items-center justify-center rounded-lg">
+              <!-- SVG icon1 -->
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.42 10.112C16.26 5.17733 22.26 2 29 2C29.2652 2 29.5196 2.10536 29.7071 2.29289C29.8946 2.48043 30 2.73478 30 3C30 9.74133 26.8227 15.74 21.888 19.5813C22.0932 20.867 22.0171 22.1819 21.6648 23.4352C21.3125 24.6886 20.6925 25.8506 19.8475 26.8411C19.0026 27.8316 17.9528 28.6269 16.7706 29.1723C15.5884 29.7177 14.3019 30.0001 13 30C12.7348 30 12.4804 29.8946 12.2929 29.7071C12.1054 29.5196 12 29.2652 12 29V23.492C10.7039 22.4685 9.53234 21.2965 8.50933 20H3C2.73478 20 2.48043 19.8946 2.29289 19.7071C2.10536 19.5196 2 19.2652 2 19C1.99989 17.6979 2.28231 16.4114 2.82776 15.2291C3.37322 14.0467 4.16871 12.9969 5.15935 12.1519C6.14998 11.3069 7.31217 10.6869 8.5657 10.3347C9.81923 9.98256 11.1342 9.90656 12.42 10.112ZM20 9C19.2044 9 18.4413 9.31607 17.8787 9.87868C17.3161 10.4413 17 11.2044 17 12C17 12.7956 17.3161 13.5587 17.8787 14.1213C18.4413 14.6839 19.2044 15 20 15C20.7957 15 21.5587 14.6839 22.1213 14.1213C22.6839 13.5587 23 12.7956 23 12C23 11.2044 22.6839 10.4413 22.1213 9.87868C21.5587 9.31607 20.7957 9 20 9Z" fill="#5E44FF"/>
+                <path d="M7.01338 22.9894C7.1187 22.9109 7.20752 22.8124 7.27477 22.6995C7.34203 22.5867 7.38639 22.4617 7.40533 22.3317C7.42427 22.2017 7.41743 22.0692 7.38518 21.9418C7.35293 21.8145 7.29591 21.6947 7.21738 21.5894C7.13885 21.4841 7.04035 21.3953 6.92749 21.328C6.81463 21.2608 6.68963 21.2164 6.55963 21.1975C6.42963 21.1785 6.29717 21.1854 6.16981 21.2176C6.04246 21.2499 5.9227 21.3069 5.81738 21.3854C4.79457 22.1462 3.99926 23.1723 3.51749 24.3525C3.03572 25.5327 2.88584 26.8222 3.08405 28.0814C3.11628 28.2912 3.2144 28.4852 3.36421 28.6355C3.51402 28.7858 3.70775 28.8845 3.91738 28.9174C5.17676 29.1155 6.46632 28.9654 7.64654 28.4834C8.82677 28.0014 9.85272 27.2058 10.6134 26.1827C10.6944 26.0777 10.7538 25.9576 10.788 25.8294C10.8221 25.7012 10.8305 25.5675 10.8124 25.436C10.7944 25.3046 10.7504 25.178 10.683 25.0637C10.6156 24.9494 10.5261 24.8497 10.4198 24.7704C10.3135 24.691 10.1924 24.6336 10.0636 24.6015C9.93491 24.5694 9.80107 24.5633 9.66992 24.5834C9.53878 24.6035 9.41296 24.6496 9.29978 24.7188C9.1866 24.7881 9.08834 24.8791 9.01072 24.9867C8.54574 25.6121 7.94081 26.1199 7.24437 26.4695C6.54793 26.8191 5.77932 27.0008 5.00005 27.0001C5.00005 25.3601 5.78938 23.9027 7.01338 22.9894Z" fill="#5E44FF"/>
+              </svg>
+            </div>
+          </div>
+          <div class="relative top-5">
+            <h3 class="font-semibold text-xl px-5 py-1 leading-5">Streamlined Workflows</h3>
+            <p class="px-5 py-1 leading-5">Automate repetitive tasks and focus on high-impact work with our powerful productivity features.</p>
+          </div>
+        </div>
+        <div class="w-96 h-72 rounded-2xl bg-[#D8E0FC] flex flex-col">
+          <!-- Outer: blue background, padding, rounded -->
+          <div class="bg-[#D8E0FC] p-3 rounded-xl inline-flex">
+            <!-- Inner: white square, center icon -->
+            <div class="bg-white w-12 h-12 flex items-center justify-center rounded-lg">
+              <!-- SVG icon2 -->
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 0C6.32 0 0.5 5.82 0.5 13C0.5 20.18 6.32 26 13.5 26C20.68 26 26.5 20.18 26.5 13C26.5 5.82 20.68 0 13.5 0ZM10 8C9.28 8 8.896 8.55867 8.752 8.84533C8.58093 9.20593 8.49473 9.60092 8.5 10C8.5 10.3973 8.57867 10.8067 8.752 11.1547C8.896 11.4413 9.27867 12 10 12C10.72 12 11.104 11.4413 11.248 11.1547C11.4213 10.808 11.5 10.3973 11.5 10C11.5 9.60267 11.4213 9.19333 11.248 8.84533C11.104 8.55867 10.7213 8 10 8ZM15.752 8.84533C15.896 8.55867 16.2787 8 17 8C17.72 8 18.104 8.55867 18.248 8.84533C18.4213 9.192 18.5 9.60267 18.5 10C18.5 10.3973 18.4213 10.8067 18.248 11.1547C18.104 11.4413 17.7213 12 17 12C16.28 12 15.896 11.4413 15.752 11.1547C15.5809 10.7941 15.4947 10.3991 15.5 10C15.5 9.60267 15.5787 9.19333 15.752 8.84533ZM18.4493 17.9493C18.5476 17.8578 18.6264 17.7474 18.681 17.6247C18.7357 17.5021 18.7651 17.3696 18.7675 17.2354C18.7698 17.1011 18.7451 16.9677 18.6948 16.8432C18.6445 16.7187 18.5697 16.6056 18.4747 16.5106C18.3798 16.4157 18.2666 16.3408 18.1421 16.2905C18.0176 16.2402 17.8842 16.2155 17.75 16.2179C17.6157 16.2202 17.4833 16.2496 17.3606 16.3043C17.238 16.3589 17.1276 16.4378 17.036 16.536C16.5717 17.0004 16.0204 17.3688 15.4137 17.6202C14.807 17.8716 14.1567 18.0009 13.5 18.0009C12.8433 18.0009 12.193 17.8716 11.5863 17.6202C10.9796 17.3688 10.4283 17.0004 9.964 16.536C9.77443 16.3594 9.52371 16.2632 9.26464 16.2678C9.00557 16.2723 8.75839 16.3773 8.57517 16.5605C8.39195 16.7437 8.287 16.9909 8.28243 17.25C8.27786 17.509 8.37403 17.7598 8.55067 17.9493C9.86339 19.2618 11.6437 19.9992 13.5 19.9992C15.3563 19.9992 17.1366 19.2618 18.4493 17.9493Z" fill="#5E44FF"/>
+              </svg>
+            </div>
+          </div>
+          <div class="relative top-5">
+            <h3 class="font-semibold text-xl px-5 py-1 leading-5">Blazing Fast Performance</h3>
+            <p class="px-5 py-1 leading-5">Experience lightning-fast performance and instant responsiveness with our cutting-edge technologies.</p>
+          </div>
+        </div>
+        <div class="w-96 h-72 rounded-2xl bg-[#E8DCF6] flex flex-col">
+          <!-- Outer: blue background, padding, rounded -->
+          <div class="bg-[#E8DCF6] p-3 rounded-xl inline-flex">
+            <!-- Inner: white square, center icon -->
+            <div class="bg-white w-12 h-12 flex items-center justify-center rounded-lg">
+              <!-- SVG icon3 -->
+              <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 0C1.23478 0 0.98043 0.105357 0.792893 0.292893C0.605357 0.480429 0.5 0.734783 0.5 1C0.5 1.26522 0.605357 1.51957 0.792893 1.70711C0.98043 1.89464 1.23478 2 1.5 2H2.5V16C2.5 17.0609 2.92143 18.0783 3.67157 18.8284C4.42172 19.5786 5.43913 20 6.5 20H8.11333L6.55067 24.684C6.46686 24.9358 6.4865 25.2105 6.60527 25.4478C6.72405 25.6851 6.93222 25.8655 7.184 25.9493C7.43578 26.0331 7.71054 26.0135 7.94783 25.8947C8.18513 25.7759 8.36553 25.5678 8.44933 25.316L8.888 24H20.112L20.552 25.316C20.643 25.5581 20.8243 25.7555 21.0578 25.8668C21.2913 25.978 21.5589 25.9945 21.8042 25.9127C22.0496 25.8309 22.2537 25.6572 22.3738 25.4281C22.4938 25.199 22.5204 24.9323 22.448 24.684L20.888 20H22.5C23.5609 20 24.5783 19.5786 25.3284 18.8284C26.0786 18.0783 26.5 17.0609 26.5 16V2H27.5C27.7652 2 28.0196 1.89464 28.2071 1.70711C28.3946 1.51957 28.5 1.26522 28.5 1C28.5 0.734783 28.3946 0.480429 28.2071 0.292893C28.0196 0.105357 27.7652 0 27.5 0H1.5ZM10.22 20H18.78L19.4467 22H9.55333L10.22 20ZM21 8.00667C21.1146 7.94148 21.2153 7.85427 21.2961 7.75004C21.3769 7.64581 21.4363 7.52663 21.4708 7.39936C21.5054 7.27209 21.5144 7.13924 21.4974 7.00845C21.4804 6.87768 21.4377 6.75155 21.3718 6.63734C21.3058 6.52313 21.2179 6.42309 21.1132 6.34298C21.0084 6.26287 20.8888 6.20428 20.7613 6.17057C20.6338 6.13686 20.5009 6.1287 20.3703 6.14657C20.2396 6.16443 20.1138 6.20797 20 6.27467C18.1821 7.32697 16.5738 8.7056 15.256 10.3413L13.2067 8.29333C13.0192 8.10607 12.765 8.00088 12.5 8.00088C12.235 8.00088 11.9808 8.10607 11.7933 8.29333L7.79333 12.2933C7.69508 12.3849 7.61628 12.4953 7.56163 12.6179C7.50697 12.7406 7.47758 12.873 7.47521 13.0073C7.47284 13.1416 7.49754 13.2749 7.54784 13.3995C7.59813 13.524 7.67299 13.6371 7.76795 13.732C7.86291 13.827 7.97602 13.9019 8.10054 13.9522C8.22505 14.0025 8.35843 14.0272 8.4927 14.0248C8.62697 14.0224 8.75939 13.993 8.88205 13.9384C9.00472 13.8837 9.11512 13.8049 9.20667 13.7067L12.5 10.4133L14.656 12.5707C14.7594 12.6741 14.8843 12.7536 15.0218 12.8035C15.1593 12.8534 15.3061 12.8726 15.4518 12.8596C15.5975 12.8467 15.7386 12.8019 15.8651 12.7285C15.9916 12.655 16.1005 12.5547 16.184 12.4347C17.446 10.6241 19.09 9.11253 21 8.00667Z" fill="#5E44FF"/>
+              </svg>
+            </div>
+          </div>
+          <div class="relative top-5">
+            <h3 class="font-semibold text-xl px-5 py-1 leading-5">Intuitive Interface</h3>
+            <p class="px-5 py-1 leading-5">Our user-friendly interface makes it easy to streamline their workflow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form Section -->
+    <main class="flex flex-1 items-center justify-center py-10">
+      <div class="w-full max-w-[1199px] h-[666px] bg-white rounded-2xl flex flex-col gap-10 shadow-lg relative">
+        <form id="contactForm" class="absolute inset-0 flex flex-col justify-center items-center gap-7">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold mb-2">Get in Touch</h1>
+            <div id="successMessage" class="hidden bg-gradient-to-r from-green-400 to-green-600 text-white py-4 px-5 rounded-lg mb-6 text-center font-semibold">✨ Thank you! Your message has been sent successfully.</div>
+          </div>
+          <div class="flex flex-col gap-2 w-full max-w-xl">
+            <label for="name" class="font-semibold text-gray-700">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition" />
+            <div class="error-message text-red-600 text-sm mt-1 hidden">Please enter your name</div>
+          </div>
+          <div class="flex flex-col gap-2 w-full max-w-xl">
+            <label for="email" class="font-semibold text-gray-700">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition" />
+            <div class="error-message text-red-600 text-sm mt-1 hidden">Please enter a valid email address</div>
+          </div>
+          <div class="flex flex-col gap-2 w-full max-w-xl">
+            <label for="message" class="font-semibold text-gray-700">Message</label>
+            <textarea id="message" name="message" placeholder="Your message..." required class="w-full px-5 py-4 border-2 border-gray-200 rounded-lg text-base min-h-[120px] focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition"></textarea>
+            <div class="error-message text-red-600 text-sm mt-1 hidden">Please enter your message</div>
+          </div>
+          <button type="submit" class="submit-btn w-full max-w-xl mx-auto h-14 rounded-lg bg-[#232336] text-white font-semibold text-base uppercase tracking-wide transition hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed relative">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer class="w-full max-w-[1199px] mx-auto px-[180px] flex justify-between items-center mb-16 text-sm">
+      <div class="text-gray-400">Acme productivity app ©2024</div>
+      <div class="flex gap-6">
+        <a href="#faq" class="text-gray-500 hover:text-indigo-500 font-medium transition">FAQ</a>
+        <a href="#terms" class="text-gray-500 hover:text-indigo-500 font-medium transition">Terms</a>
+        <a href="#ai-policy" class="text-gray-500 hover:text-indigo-500 font-medium transition">AI Policy</a>
+        <a href="#pricing" class="text-gray-500 hover:text-indigo-500 font-medium transition">Pricing</a>
+      </div>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
