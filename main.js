@@ -86,3 +86,28 @@ menuItems.forEach(item => {
     this.classList.add('text-[#5E44FF]', 'underline', 'decoration-2', 'underline-offset-4');
   });
 }); 
+
+// Hamburger menu toggle
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileNav = document.getElementById('mobileNav');
+
+if (hamburgerBtn && mobileNav) {
+  hamburgerBtn.addEventListener('click', function () {
+    mobileNav.classList.toggle('hidden');
+    document.body.classList.toggle('overflow-hidden');
+  });
+  // Close mobile menu when clicking a link
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+      mobileNav.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    });
+  });
+  // Optional: Close menu when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!mobileNav.classList.contains('hidden') && !mobileNav.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+      mobileNav.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+} 
