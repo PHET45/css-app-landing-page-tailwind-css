@@ -16,23 +16,36 @@
       body { font-family: 'Inter', sans-serif; }
     </style>
   </head>
-  <body class="bg-[#F6F6FB] min-h-screen flex flex-col">
+  <body class="bg-[#F6F6FB] min-h-screen flex flex-col xs:flex xs:flex-col">
     <!-- Navbar -->
     <section class="sticky top-0 z-50 flex justify-center py-2 px-5 bg-transparent">
       <div class="flex items-center justify-between w-full max-w-[100%] h-20 rounded-full bg-white shadow-md px-20">
         <div>
           <!-- Inline SVG logo -->
-          <svg width="100" height="40" viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
+          <svg width="100" height="40" viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[100px] h-10 md:w-[55px] md:h-[24px] md:opacity-100">
             <text x="0" y="32" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="bold" fill="#232336">Acme</text>
             <circle cx="89" cy="10" r="4" fill="#5E44FF" />
           </svg>
         </div>
+        <!-- Hamburger button (mobile only) -->
+        <button id="hamburgerBtn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 ml-2" aria-label="Open menu" type="button">
+          <span class="block w-7 h-1 bg-[#232336] rounded-full mb-1"></span>
+          <span class="block w-7 h-1 bg-[#232336] rounded-full mb-1"></span>
+          <span class="block w-7 h-1 bg-[#232336] rounded-full"></span>
+        </button>
         <nav>
-          <ul class="flex gap-8">
+          <ul id="mainNav" class="hidden md:flex gap-8">
             <li><a href="#home" class="font-medium text-base text-[#5E44FF] underline underline-offset-4 decoration-2">Home</a></li>
             <li><a href="#features" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Features</a></li>
             <li><a href="#pricing" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Pricing</a></li>
             <li><a href="#contact" class="font-medium text-base text-black hover:text-[#5E44FF] hover:underline underline-offset-4 decoration-2 transition">Contact</a></li>
+          </ul>
+          <!-- Mobile menu -->
+          <ul id="mobileNav" class="absolute top-20 right-5 w-[343px] h-[272px] bg-white rounded-[24px] opacity-100 pt-3 pr-6 pb-3 pl-6 gap-2 border-b border-gray-200 flex-col items-center justify-center text-center hidden md:hidden z-50">
+            <li><a href="#home" class="block py-2 font-medium text-2xl text-[#5E44FF]">Home</a></li>
+            <li><a href="#features" class="block py-2 font-medium text-2xl text-black hover:text-[#5E44FF]">Features</a></li>
+            <li><a href="#pricing" class="block py-2 font-medium text-2xl text-black hover:text-[#5E44FF]">Pricing</a></li>
+            <li><a href="#contact" class="block py-2 font-medium text-2xl text-black hover:text-[#5E44FF]">Contact</a></li>
           </ul>
         </nav>
       </div>
